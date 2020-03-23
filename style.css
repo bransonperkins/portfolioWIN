@@ -28,8 +28,9 @@ span {
     max-width: 200px;
     background: #464646;
     color: #BABABA;
+    text-shadow: 1px 1px 1px #2BC6FA;
     transition: all 0.3s;
-    text-align: center;
+    text-align: left;
     font-family: 'Roboto Slab', serif;
 }
 
@@ -49,7 +50,7 @@ span {
 }
 
 #sidebar ul li a {
-    text-align: center;
+    text-align: left;
 }
 
 #sidebar.active ul li a {
@@ -107,12 +108,9 @@ span {
     margin-right: 10px;
 }
 
-/* colors the selected item on navbar */
-/* #sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-} */
+#sidebarCollapse {
+    background-color: #2BC6FA;
+}
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -143,37 +141,61 @@ ul ul a {
     font-family: 'Crimson Text', serif;
 }
 
+.blob {
+    box-shadow: 5px 5px 8px #2BC6FA, 10px 10px 8px #FF9C24;
+}
+
 .blob h2 {
-	color: #FF9C24;
+	color: #2BC6FA;
 	font-weight: 100;
-	font-size: 2.5rem;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .blob p {
 	color: #fff;
 	font-weight: 100;
 	font-size: 1.125rem;
-	line-height: 2;
+    line-height: 2;
+    padding-left: 10px;
+    padding-right: px;
 }
 
 .content {
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 #headingGroup span {
-	color: #FF9C24;
+    color: #FF9C24;
+    font-style: oblique;
 }
 
 #headingGroup h1 {
 	font-weight: 100;
-	font-size: 4rem;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #FF9C24;
 }
 
 /* Media queries  */
 
 @media (max-width: 768px) {
     #sidebar {
+        display: none;
+    }
+
+    #navbar {
+        background: #464646;
+        color: #BABABA;
+        text-shadow: 1px 1px 1px #2BC6FA;
+    }
+
+    #navbarCollapse {
+        background-color: #2BC6FA;
+    }
+
+    /* #sidebar {
         min-width: 80px;
         max-width: 80px;
         text-align: center;
@@ -214,25 +236,15 @@ ul ul a {
     }
     #sidebar {
         margin-left: 0;
+    } */
     }
-    #sidebarCollapse span {
-        display: none;
-    }
-    #headingGroup h1 {
-		font-weight: 100;
-		font-size: 3rem;
-	}
-	.blob h2 {
-        font-size: 2rem;
-    }
-}
-/* 
+
 @media (max-width: 1270px) {
 	#headingGroup h1 {
 		font-weight: 100;
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 	.blob h2 {
-        font-size: 2rem;
+        font-size: 1rem;
     }
-} */
+}
